@@ -8,6 +8,7 @@ class HighlightPop extends Component {
       showPopover: false,
       x: 0,
       y: 0,
+			width: 0,
       selectedText: ''
     };
 
@@ -73,12 +74,13 @@ class HighlightPop extends Component {
     this.setState({
       x: x + width / 2,
       y: y + window.scrollY - 20,
+			width: width,
       selectedText,
       showPopover: true
     });
 
 		const { onHighlightPop = () => {} } = this.props;
-		onHighlightPop(selectedText, x, y, width);
+		onHighlightPop(selectedText, this.state.x, this.state.y, width);
 	};
 
   render() {
