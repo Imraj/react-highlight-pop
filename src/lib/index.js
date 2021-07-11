@@ -72,7 +72,7 @@ class HighlightPop extends Component {
 
     this.setState({
       x: x + width / 2,
-      y: y + window.scrollY - 10,
+      y: y + window.scrollY - 20,
       selectedText,
       showPopover: true
     });
