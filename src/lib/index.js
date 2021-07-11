@@ -78,7 +78,7 @@ class HighlightPop extends Component {
     });
 
 		const { onHighlightPop = () => {} } = this.props;
-		onHighlightPop(selectedText);
+		onHighlightPop(selectedText, x, y, width);
 	};
 
   render() {
